@@ -1,0 +1,30 @@
+--
+-- For more information on build.settings see the Corona Build Guide at:
+-- http://docs.coronalabs.com/guide/distribution/buildSettings/index.html
+--
+
+settings =
+{
+
+	iphone =
+	{
+		xcassets = "Images.xcassets",
+		plist =
+		{
+			NSCameraUsageDescription="Need for Camera Scanning",
+			UILaunchStoryboardName = "LaunchScreen",
+		},
+	},
+	plugins =
+    {
+        ["plugin.dataScanner"] =
+        {
+            publisherId = "tech.scotth",
+            supportedPlatforms = {
+                iphone = { url="https://github.com/scottrules44/dataScanner-Solar2D/releases/download/1.0/dataScanner_iOS.tgz" },
+                ["mac-sim"] = { url="https://github.com/scottrules44/dataScanner-Solar2D/releases/download/1.0/dataScanner_lua.tgz" },
+                ["win32-sim"] = { url="https://github.com/scottrules44/dataScanner-Solar2D/releases/download/1.0/dataScanner_lua.tgz" },
+            },
+        },
+    },
+}
