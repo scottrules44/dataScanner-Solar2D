@@ -197,7 +197,7 @@ dataScanner::hide( lua_State *L )
 int
 dataScanner::startScaning( lua_State *L )
 {
-    if(myHolder.myScanner){
+    if(myHolder.myScanner && myHolder.scannerView){
         [myHolder.myScanner startScanning];
     }
     return 0;
@@ -205,7 +205,7 @@ dataScanner::startScaning( lua_State *L )
 int
 dataScanner::stopScaning( lua_State *L )
 {
-    if(myHolder.myScanner){
+    if(myHolder.myScanner && myHolder.scannerView){
         [myHolder.myScanner stopScanning];
     }
     return 0;
@@ -214,7 +214,7 @@ dataScanner::stopScaning( lua_State *L )
 // ----------------------------------------------------------------------------
 @implementation scannerHolder
 - (void) closeDataScanner{
-    if(self.myRef){
+    if(myHolder.myRef){
         CoronaLuaNewEvent(myHolder.myLuaState, "dataScanner");
         lua_pushstring(myHolder.myLuaState, "closeDataScanner");
         lua_setfield(myHolder.myLuaState, -2, "status");
@@ -222,7 +222,6 @@ dataScanner::stopScaning( lua_State *L )
     }
     [myHolder.scannerView dismissViewControllerAnimated:YES completion:^{
         myHolder.scannerView = NULL;
-        myHolder = NULL;
     }];
     
 };

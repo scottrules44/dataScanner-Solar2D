@@ -21,9 +21,9 @@ settings =
         {
             publisherId = "tech.scotth",
             supportedPlatforms = {
-                iphone = { url="https://github.com/scottrules44/dataScanner-Solar2D/releases/download/1.0/dataScanner_iOS.tgz" },
-                ["mac-sim"] = { url="https://github.com/scottrules44/dataScanner-Solar2D/releases/download/1.0/dataScanner_lua.tgz" },
-                ["win32-sim"] = { url="https://github.com/scottrules44/dataScanner-Solar2D/releases/download/1.0/dataScanner_lua.tgz" },
+                iphone = { url="https://github.com/scottrules44/dataScanner-Solar2D/releases/download/1.1/dataScanner_iOS.tgz" },
+                ["mac-sim"] = { url="https://github.com/scottrules44/dataScanner-Solar2D/releases/download/1.1/dataScanner_lua.tgz" },
+                ["win32-sim"] = { url="https://github.com/scottrules44/dataScanner-Solar2D/releases/download/1.1/dataScanner_lua.tgz" },
             },
         },
     },
